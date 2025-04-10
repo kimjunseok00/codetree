@@ -2,23 +2,28 @@
 
 using namespace std;
 
-int a, b;
-int hi(int x,int y){
-    int sam=0,sum=0 ;
-    for(int i=2 ; i<x; i++){
-        if(x % i ==0 && x % 2 == 0)
-            sum++;
+bool gray(int m){
+    if(m<2) return false;
+    for(int i=2 ; i*i<=m ; i++){
+        if(m%i==0)
+        return false;
     }
-    for(int i=2 ; i<y; i++){
-        if(y % i ==0 && y % 2 ==0)
-            sam++;
-    }
-        return (sam-sum) ;
+    return true;
+}
+
+bool ignore(int n){
+    int ones = n%10 ;
+    int tens = (n/10)%10 ;
+    return (ones+tens)%2==0 ;
 }
 
 int main() {
+    int a, b, count=0;
     cin >> a >> b;
-
-    cout << hi(a,b) ;
+    for(int i=a ; i<=b ; i++){
+        if(gray(i) && ignore(i))
+                count ++;
+        }
+    cout << count ;
     return 0;
 }
