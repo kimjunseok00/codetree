@@ -27,10 +27,12 @@ int main() {
             l.insert(it,c) ;    
         }
         else if(command=='L') {// 바로 앞 위치변경
-            it--;
+            if(it!=l.begin())
+                it--;
         }
         else if(command=='R'){ // 바로 뒤 위치변경
-            it++;
+            if(it!=l.end())
+                it++;
         }
         else if(command=='D'){ // 바로 뒤 제거 
             l.erase(it);
