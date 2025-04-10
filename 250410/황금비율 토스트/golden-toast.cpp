@@ -35,7 +35,8 @@ int main() {
                 it++;
         }
         else if(command=='D'){ // 바로 뒤 제거 
-            it = l.erase(it);
+            if(it!=l.end())
+                it = l.erase(it);
         }
     }
 
