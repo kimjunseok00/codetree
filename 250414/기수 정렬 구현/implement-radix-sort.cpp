@@ -1,9 +1,9 @@
 #include <iostream>
 
 using namespace std;
-
+const int maxm = 100000;
 int n;
-int arr[100000];
+int arr[maxm];
 void bubble(int arr[], int k){
     int max = arr[0] ;
     
@@ -12,8 +12,8 @@ void bubble(int arr[], int k){
     }
     
     for (int exp = 1 ; max / exp > 0 ; exp *= 10){
-        int brr[10][1000] ;
-        int brrsize[100] = {0} ;
+        int brr[10][maxm] ;
+        int brrsize[10] = {0} ;
         
         for(int j=0 ; j < k ; j++){
             int num = (arr[j] / exp) % 10 ;
