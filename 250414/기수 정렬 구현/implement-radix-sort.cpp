@@ -3,7 +3,7 @@
 using namespace std;
 
 int n;
-int arr[100];
+int arr[100000];
 void bubble(int arr[], int k){
     int max = arr[0] ;
     
@@ -12,8 +12,8 @@ void bubble(int arr[], int k){
     }
     
     for (int exp = 1 ; max / exp > 0 ; exp *= 10){
-        int brr[10][100] ;
-        int brrsize[10] = {0} ;
+        int brr[100][100] ;
+        int brrsize[100] = {0} ;
         
         for(int j=0 ; j < k ; j++){
             int num = (arr[j] / exp) % 10 ;
