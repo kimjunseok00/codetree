@@ -7,7 +7,7 @@ int arr[100];
 void bubble(int arr[], int k){
     int max = arr[0] ;
     
-    for(int i = 0 ; i < n ; i++){
+    for(int i = 0 ; i < k ; i++){
         if(max < arr[i]) max = arr[i] ;
     }
     
