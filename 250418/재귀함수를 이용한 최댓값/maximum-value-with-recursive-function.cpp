@@ -7,8 +7,8 @@ int arr[100];
 
 int sum(int arr[],int a){
     if(a==1) return a;
-    int max = sum(arr,a-1);
-    return max > arr[a] ? max : arr[a];
+    int submax = sum(arr,a-1);
+    return max(arr[a-1],submax);
 }
 
 int main() {
