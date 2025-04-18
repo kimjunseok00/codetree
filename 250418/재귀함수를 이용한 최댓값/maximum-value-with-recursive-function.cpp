@@ -6,7 +6,7 @@ int n;
 int arr[100];
 
 int sum(int arr[],int a){
-    if(a==1) return a;
+    if(a==1) return arr[0];
     int submax = sum(arr,a-1);
     return max(arr[a-1],submax);
 }
