@@ -4,7 +4,7 @@ using namespace std;
 
 int a, b, c;
 
-long long f(long longnum){
+long long f(long long num){
     if(num==0) return 0; 
     return (num%10) + f(num/10);
 }
