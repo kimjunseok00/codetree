@@ -6,7 +6,7 @@ int a, b, c;
 int arr[10] ;
 int f(int num){
     if(num==0) return 0; 
-    return (num/100) + (num/10%10) + num%10 ;
+    return (num/1000%10) + (num/100%10) + (num/10%10) + num%10 ;
 }
 
 int sum(int x, int y,int z){
