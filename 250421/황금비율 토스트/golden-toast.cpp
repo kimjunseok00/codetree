@@ -9,7 +9,7 @@ string s;
 int main() {
     cin >> n >> m;
     cin >> s;
-    list <char> l;
+    list <string> l;
     for (int i = 0 ; i < n ; i++){
         l.push_back(s[i]) ;
     }
