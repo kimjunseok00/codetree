@@ -6,14 +6,15 @@ int n;
 int arr[100];
 
 void ch(int arr[],int a){
-    int b = 0 ;
     for(int i = 0 ; i < a - 1 ; i++){
+    int b = i ;
         for(int j = i + 1 ; j < a - 1 ; j++){
             if(arr[i] > arr[j]){
-                b = arr[j] ;
-                arr [j] = arr[i] ;
-                arr [i] = b ;
+                b = j ;
             }
+                int tmp = arr[i] ;
+                arr [i] = arr[b] ;
+                arr [b] = tmp ;
         }
     }
     return ;
