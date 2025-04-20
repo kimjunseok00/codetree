@@ -7,14 +7,16 @@ int arr[100];
 
 void ch(int arr[],int a){
     for(int i = 0 ; i < a - 1 ; i++){
-    int b = i ;
-        for(int j = i + 1 ; j < a - 1 ; j++){
-            if(arr[i] > arr[j]){
+        int b = i ;
+        for(int j = i + 1 ; j < a ; j++){
+            if(arr[b] > arr[j]){
                 b = j ;
             }
-                int tmp = arr[i] ;
-                arr [i] = arr[b] ;
-                arr [b] = tmp ;
+            if(i!=b){
+            int tmp = arr[i] ;
+            arr[i] = arr[b];
+            arr [b] = tmp ;
+            }
         }
     }
     return ;
