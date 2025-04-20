@@ -12,12 +12,10 @@ void ch(int arr[],int a){
             if(arr[b] > arr[j]){
                 b = j ;
             }
-            if(i!=b){
-            int tmp = arr[i] ;
-            arr[i] = arr[b];
-            arr [b] = tmp ;
-            }
         }
+            if(i!=b){
+            swap(arr[i],arr[b]);
+            }
     }
     return ;
 }
