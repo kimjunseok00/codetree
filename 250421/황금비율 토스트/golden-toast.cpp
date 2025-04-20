@@ -27,6 +27,8 @@ int main() {
             it--;
             l.insert(it,c);
             }
+            else
+            l.insert(it,c);
         }
         if(command == 'L') {
             if(it!=l.begin())
