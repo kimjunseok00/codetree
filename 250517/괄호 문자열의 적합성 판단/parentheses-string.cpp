@@ -26,7 +26,7 @@ int main() {
     cin >> input;
 
     if (isValidParentheses(input)) {
-        cout << "Yes\n" <<;
+        cout << "Yes\n" ;
     } else {
         cout << "No" << endl;
     }
