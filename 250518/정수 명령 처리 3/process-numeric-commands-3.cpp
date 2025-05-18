@@ -12,7 +12,7 @@ int main() {
     
     for (int i = 0; i < N; i++) {
         cin >> command[i];
-        if (command[i] == "push") {
+        if (command[i] == "push_back" || command[i] == "push_front") {
             cin >> num[i];
         }
     }
@@ -21,7 +21,7 @@ int main() {
     
     for(int i =0 ; i<N ; i++){
         
-        if(command[i]=="push_front"){
+        if(command[i]=="push_front" ){
             s.push_front(num[i]) ;
         }
 
@@ -45,13 +45,15 @@ int main() {
         if(command[i]=="front"){
             cout << s.front() << endl ;
         }
-        if(command[i]=="back") cout << s.back() << endl; 
-        if(command[i]=="popback") { 
-            cout<< s.back() << endl ;
+        if(command[i]=="back"){
+            cout << s.back() << endl; 
+        }
+        if(command[i]=="pop_back") { 
+            cout << s.back() << endl; 
             s.pop_back();
         }
         if(command[i]=="push_back") {
-        s.push_back();
+            s.push_back(num[i]);
         }
     }
         
