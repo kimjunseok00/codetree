@@ -19,10 +19,10 @@ int main() {
     }
     for (int i = 0; i < N; i++) {
         if (cmd[i] == "push_front") {
-            d.pushfront();
+            d.push_front();
         }
         if (cmd[i] == "push_back") {
-            d.pushback();
+            d.push_back();
         }
         if (cmd[i] == "pop_front") {
             cout << d.front() << endl;
@@ -39,10 +39,10 @@ int main() {
             cout << d.front() << endl;;
         }
         if (cmd[i] == "back") {
-            cout << q.back() << endl; 
+            cout << d.back() << endl; 
         }
         if (cmd[i] == "empty") {
-            if(q.empty()) cout << "1" << endl;
+            if(d.empty()) cout << "1" << endl;
             else cout << "0" << endl; 
         }
     }
