@@ -19,10 +19,10 @@ int main() {
     }
     for (int i = 0; i < N; i++) {
         if (cmd[i] == "push_front") {
-            d.push_front();
+            d.push_front(num[i]);
         }
         if (cmd[i] == "push_back") {
-            d.push_back();
+            d.push_back(num[i]);
         }
         if (cmd[i] == "pop_front") {
             cout << d.front() << endl;
