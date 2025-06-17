@@ -1,0 +1,53 @@
+#include <iostream>
+#include <string>
+#include <deque>
+
+using namespace std;
+
+int N;
+string cmd[10000];
+int num[10000];
+
+int main() {
+    deque<int> d;
+    cin >> N;
+    for (int i = 0; i < N; i++) {
+        cin >> cmd[i];
+        if (cmd[i] == "push_front" || cmd[i] == "push_back") {
+            cin >> num[i];
+        }
+    }
+    for (int i = 0; i < N; i++) {
+        if (cmd[i] == "push_front") {
+            d.pushfront();
+        }
+        if (cmd[i] == "push_back") {
+            d.pushback();
+        }
+        if (cmd[i] == "pop_front") {
+            cout << d.front() << endl;
+            d.pop_front();
+        }
+        if (cmd[i] == "pop_back") {
+            cout << d.back() << endl;
+            d.pop_back();
+        }
+        if (cmd[i] == "size") {
+            cout << d.size() <<endl;
+        }
+        if (cmd[i] == "front") {
+            cout << d.front() << endl;;
+        }
+        if (cmd[i] == "back") {
+            cout << q.back() << endl; 
+        }
+        if (cmd[i] == "empty") {
+            if(q.empty()) cout << "1" << endl;
+            else cout << "0" << endl; 
+        }
+    }
+
+    // Please write your code here.
+
+    return 0;
+}
