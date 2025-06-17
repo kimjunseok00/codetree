@@ -18,7 +18,7 @@ int main() {
                 s.pop();
             }
             else{
-                cout << " No" ;
+                cout << "No" ;
                 return 0;
             }
         }   
